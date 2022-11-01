@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 文字コード変更 -->
+    <meta charset="UTF-8">
+
+    <!-- tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+
+    <style type="text/css">
+      #Title:before{
+        content:'テスト';
+      }
+    </style>
+
+  </head>
+  <body class="bg-black">
+    <!--<div class="rounded bg-gray-900">-->
+    <div class="m-2 rounded-[50px] bg-blue-900">
+      <div class="flex justify-start">
+        <div class="rounded-full m-2 h-10 w-10 bg-red-500"></div>
+        <div class="rounded-full m-2 h-10 w-10 bg-yellow-500"></div>
+        <div class="rounded-full m-2 h-10 w-10 bg-green-500"></div>
+      </div>
+      <div class="flex justify-center" id="Title">コンテンツ</div>
+      
+      <!--ウィンドウの中-->
+      <div class="bg-white">
+        <div class="pt-48 text-6xl font-bold">500 Internal Server Error</div>
+        <div class="border-b-4 border-gray-400 pt-20"></div>
+        <div class="pt-10 pb-64 text-6xl text-gray-400">nginx/1.10.3（Ubuntu）</div>
+        <!--<div class="p-10">nginx/1.10.3（Ubuntu）</div>-->
+      </div>
+    </div>
+    <!--<button class="w-24 m-4 p-4 rounded-sm bg-red-500 text-center text-white">テスト</button>-->
+  </body>
+</html>
