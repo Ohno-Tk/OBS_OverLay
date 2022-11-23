@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 文字コード変更 -->
+    <meta charset="UTF-8">
+
+    <!-- tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+
+    <style type="text/css">
+      img{
+        width: 35px;
+        height: 35px;
+      }
+    </style>
+
+    
+
+  </head>
+  <body>
+    <!-- OBS Width:550px Height:50px -->
+
+    <div class="w-auto h-11 rounded-full bg-black bg-opacity-95 text-3xl text-white font-bold">
+      <div class="flex justify-between items-center px-7 py-1">
+        <div id="view_clock"></div>
+        <div><img src="./image/Bell.png" /></div>
+        <div><img src="./image/Battery.png" /></div>
+        <div><img src="./image/Bluetooth.png" /></div>
+        <div><img src="./image/Wi-Fi.png" /></div>
+        <div><img src="./image/Volume.png" /></div>
+        <div><img src="./image/Arrow.png" /></div>
+      </div>
+
+    <script type="text/javascript">
+      timerID = setInterval('clock()',500);
+
+      //0.5秒毎にclock()を実行
+      function clock() {
+        document.getElementById("view_clock").innerHTML = getNow();
+      }
+      // 現在時刻
+      function getNow() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var mon = now.getMonth()+1;
+        var day = now.getDate();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+
+        //出力用
+        var time = year + "/" + mon + "/" + day + "  " + hour + ":" + min + ":" + sec;
+        return time;
+      }
+    </script>
+  </body>
+</html>
